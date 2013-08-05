@@ -349,6 +349,19 @@ limitations under the License.
         }
         return this;
     };
+
+	/**
+	 * Scales and adds a Vec2 to this Vec2, without cloning or modifying the other vector
+	 * @param {JustMath.Vec2} v Other Vec2
+	 * @param {number} s Scaling factor before addition
+	 * @return {JustMath.Vec2} This Vec2
+	 * @expose
+	 */
+	Vec2.prototype.add_scaled = function(v, s) {
+		this.x += v.x*s;
+		this.y += v.y*s;
+		return this;
+	};
     
     /**
      * Subtracts a value from this Vec2.
